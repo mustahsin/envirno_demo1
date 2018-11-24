@@ -4,7 +4,7 @@
         
         <div class="google-maps-page col-md-12">
             <card header-text="Map Location" class="row">
-                <google-map v-bind:locationArray="locationArray"></google-map>
+                <google-map v-bind:locationArray="markers"></google-map>
             </card>
         </div>
         <Table v-bind:waterData="currentData" v-bind:referenceData="referenceData" />
@@ -87,7 +87,12 @@ export default{
                     lat:23.83,
                     long:90.50
                 }
-            ]
+            ],
+            markers: [
+        { position: { lat:23.838733, lng:  90.505829 } },
+        { position: { lat: 24.043177, lng: 91.015026 } },
+        { position: { lat: 23.890211, lng: 90.332650 } }
+      ]
         }
           
     }
