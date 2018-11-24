@@ -33,6 +33,8 @@ const LeafletMapsPage = resolve => { require.ensure(['../components/maps/leaflet
 const BubbleMapsPage = resolve => { require.ensure(['../components/maps/bubble-maps/BubbleMapsPage.vue'], ()=>{ resolve(require('../components/maps/bubble-maps/BubbleMapsPage.vue')); }); };
 const LineMapsPage = resolve => { require.ensure(['../components/maps/line-maps/LineMapsPage.vue'], ()=>{ resolve(require('../components/maps/line-maps/LineMapsPage.vue')); }); };
 
+//industry
+const IndustryPage = resolve => { require.ensure(['../components/industry/industryHeader.vue'], () => { resolve(require('../components/industry/industryHeader.vue')); }); };
 
 // // User Info
 // const User = resolve => { require.ensure(['../layouts/User.vue'], ()=>{ resolve(require('../layouts/User.vue')); }); };
@@ -72,6 +74,16 @@ export const routes = [
     { path : '/components/widgets', name: 'widgets', component: Widgets },
     { path : '/components/typography', name: 'typography', component: Typography },
     { path : '/components/tables', name: 'tables', component: Tables },
+
+    // show Industry profile
+    {
+        path: '/components/industry',
+        name: 'Industry',
+        component: IndustryPage,
+        props: true
+    },
+
+    // { path: '/components/industry', name: 'industryDetails', component: IndustryPage },
 
     {
         path : '/components/icons',
@@ -176,4 +188,5 @@ export const routes = [
 
     // 404 redirect to home
     { path: '*', redirect: { name: 'Page404', component: Page404 }  }
+
 ];

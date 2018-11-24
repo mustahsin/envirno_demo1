@@ -7,11 +7,12 @@
                 </div>
                 <div class="card-body">
                     <div class="mx-auto d-block">
-                        <img class="rounded-circle mx-auto d-block" :src="'dist/'+ industry.imageName" alt="pic">
-                        <!-- <img class="rounded-circle mx-auto d-block" v-bind:src="path(etp2.png)" alt="Industry picture"> -->
+                        <router-link :to="{ name: 'Industry', params:  {industry}  }">
+                            <img class="rounded-circle mx-auto d-block" :src="'dist/'+ industry.imageName" alt="pic">
+                        </router-link>
                         <div class="location text-sm-center"><i class="fa fa-map-marker"></i> {{industry.Address}}</div>
-                        <h5 class="text-sm-center mt-2 mb-1">Status: {{industry.Status}}</h5>
-                    </div>
+                            <h5 class="text-sm-center mt-2 mb-1">Status: {{industry.Status}}</h5>
+                        </div>
                     <hr>
 
                 </div>
@@ -28,7 +29,7 @@
 
     export default {
         name: 'IndustryCard',
-        props: ['industryData'],
+        props: ['industryData','tableData'],
         components: {
           
         },
@@ -41,6 +42,12 @@
         },
         methods:
         {
+            // selectIndustry: function(event) 
+            // {
+            //     // /components/industry
+            //     var targetId = event.currentTarget.id;
+            //     alert(targetId);
+            // }
         },
         computed: {
             path (icon_name) {

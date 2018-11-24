@@ -195,12 +195,12 @@ aside.left-panel {
     }
     .navbar-brand {
         display: inline-block;
-        float: left;
+        float: center;
         line-height: 3.5;
         margin: 0;
-        padding: 0 0 7px 1.25em;
+        padding: 10px 0 7px 1.25em;
         img {
-            max-width: 145px;
+            max-width: 160px;
         }
         &.hidden {
             display: none;

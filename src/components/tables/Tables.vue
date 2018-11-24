@@ -134,8 +134,7 @@
         {
           this.addrealData();
           this.assignAvg();
-          //alert("temperature average : " + tempAverage);
-
+          //alert("Tablees.vue component created");
         },
     }
 </script>

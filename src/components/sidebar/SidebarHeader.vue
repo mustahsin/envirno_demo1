@@ -14,11 +14,11 @@
             <i class="fa fa-bars"></i>
         </button>
         <router-link to="/" class="navbar-brand" exact>
-            <img src="../../images/logo.png" alt="Logo">
+            <img src="../../images/envirotics_logo.png" alt="Logo">
         </router-link>
 
         <router-link to="/" class="navbar-brand hidden">
-            <img src="../../images/logo2.png" alt="Logo">
+            <img src="../../images/envirotics_logo.png" alt="Logo">
         </router-link>
 
         <sidebar-collapse></sidebar-collapse>

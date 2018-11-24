@@ -7,7 +7,7 @@
                 <google-map v-bind:locationArray="markers"></google-map>
             </card>
         </div>
-        <Table v-bind:waterData="currentData" v-bind:referenceData="referenceData" />
+        <!-- <Table v-bind:waterData="currentData" v-bind:referenceData="referenceData" /> -->
     </div>
 
     
@@ -53,34 +53,32 @@ export default{
                 Humidity:77,
                 Flow_speed:6
             },
+            allFactoryData:[{
+                    Temperature:25,
+                    PH:4.0,
+                    Humidity:77,
+                    Flow_speed:6
+                },
+                {
+                    Temperature:26,
+                    PH:5.0,
+                    Humidity:57,
+                    Flow_speed:5
+                },
+                {
+                    Temperature:35,
+                    PH:9.0,
+                    Humidity:99,
+                    Flow_speed:2
+                }
+            ],
             referenceData:{
                 Temperature:28,
                   PH:7.0,
                   Humidity:68,
                   Flow_speed:6
               },
-            industryList:[{
-                Name:'Purbachal factory',
-                imageName:'etp1.jpg',
-                  Status:'Very good',
-                  Address:'Purbachal express',
-                  Total_polution:12
-            },
-            {
-             Name:'Ashuganj factory',
-                  Status:'Good',
-                  imageName:'etp2.jpg',
-                  Address:'Ashuganj',
-                  Total_polution:19
-            },
-            {
-             Name:'Savar factory',
-             imageName:'etp3.jpg',
-                  Status:'Low',
-                  Address:'Savar',
-                  Total_polution:28
-            }
-            ],
+            industryList:[],
             locationArray:[
                 {
                     name:'Purbachal factory',
@@ -95,6 +93,50 @@ export default{
       ]
         }
           
+    },
+    computed:
+    {
+        addDummyFactory()
+        {
+            var factory1 =
+            {
+                Name:'Purbachal factory',
+                imageName:'etp1.jpg',
+                Status:'Very good',
+                Address:'Purbachal express',
+                Total_polution:12,
+                sensorData:this.allFactoryData[0]
+            }
+            this.industryList.push(factory1);
+
+            var factory2 =
+            {
+                Name:'Ashuganj factory',
+                Status:'Good',
+                imageName:'etp2.jpg',
+                Address:'Ashuganj',
+                Total_polution:19,
+                sensorData:this.allFactoryData[1]
+            }
+            this.industryList.push(factory2);
+
+            var factory3 =
+            {
+                Name:'Savar factory',
+                imageName:'etp3.jpg',
+                Status:'Low',
+                Address:'Savar',
+                Total_polution:28,
+                sensorData:this.allFactoryData[2]
+            }
+            this.industryList.push(factory3);
+
+            //alert(this.industryList[0].sensorData.Temperature); 
+        }
+    },
+    mounted ()
+    {
+        this.addDummyFactory();
     }
 }
 
