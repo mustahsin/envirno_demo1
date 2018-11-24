@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="">
-      <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-12">
         <card header-text="Current Water Data Table">
           <div class="table-responsive">
             <table class="table table-sm color-icon-label-table table-hover table-bordered" >
@@ -17,8 +17,8 @@
               <tbody>
               <tr v-for="item in 4" :key="item">
                 <td>{{item}}</td>
-                <td>{{Object.keys(currentData)[item-1]}}</td>
-                <td>{{currentData[Object.keys(currentData)[item-1]]}}</td>
+                <td>{{Object.keys(waterData)[item-1]}}</td>
+                <td>{{waterData[Object.keys(waterData)[item-1]]}}</td>
                 <td>{{avgData[item-1]}}</td>
                 <td>{{referenceData[Object.keys(referenceData)[item-1]]}}</td>
               </tr>
@@ -60,6 +60,7 @@
 
     export default {
         name: 'Table',
+        props: ['waterData','referenceData'],
         components: {
           DataTable
         },
@@ -73,28 +74,12 @@
               sortFunctions: FieldsDef.sortFunctions,
               paginationPath: '',
               allData:[],
-              avgData:[],
-              currentData:{
-                Temperature:20,
-                  PH:3.0,
-                  Humidity:78,
-                  Flow_speed:7
-              },
-              referenceData:{
-                Temperature:28,
-                  PH:7.0,
-                  Humidity:68,
-                  Flow_speed:6
-              }
+              avgData:[]
           }
           
         },
         methods:
         {
-          getTotalParameter()
-          {
-            this.totalParameters = 4
-          },
           addrealData()
           {
             for (var i=1;i<10;i++)

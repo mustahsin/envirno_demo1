@@ -35,7 +35,7 @@
 body {
   background: #f1f2f7;
   font-family: 'Open Sans' sans-serif;
-  font-size: 16px;}
+  font-size: 14px;}
 
 .admin-container {
   display: table;
@@ -46,7 +46,7 @@ div[class*="col-"] {
   float: left; }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px; }
 
@@ -201,7 +201,7 @@ aside.left-panel {
             content: "\f105";
             color: #c8c9ce;
             font-family: 'Fontawesome';
-            font-size: 16px;
+            font-size: 14px;
             position: absolute;
             top: 10px;
             right: 0;
@@ -392,7 +392,7 @@ header.fixed-top {
   border: none;
   color: #272c33;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   height: 41px;
   width: 43px;
   line-height: 38px; }
@@ -418,7 +418,7 @@ header .form-inline {
       border-radius: 0;
       box-shadow: none;
       color: #d3d3d3;
-      font-size: 16px;
+      font-size: 14px;
       height: inherit;
       margin-right: 0 !important;
       padding: 10px 36px 10px 15px;
@@ -431,7 +431,7 @@ header .form-inline {
       background: transparent;
       border: none;
       color: #fff;
-      font-size: 16px;
+      font-size: 14px;
       position: absolute;
       right: 15px;
       top: 50%;
@@ -456,7 +456,7 @@ header .form-inline {
     background: transparent;
     border: none;
     color: #272c33;
-    font-size: 16px; }
+    font-size: 14px; }
     .header-left .dropdown .dropdown-toggle:after {
       display: none; }
     .header-left .dropdown .dropdown-toggle .count {

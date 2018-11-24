@@ -3,6 +3,7 @@ import { Bar } from 'vue-chartjs'
 
 export default({
   extends: Bar,
+  props:['waterData'],
   mounted () {
     // Overwriting base render method with actual data.
     this.renderChart({

@@ -10,6 +10,14 @@ import { index } from './components/index';
 import VueFormWizard from 'vue-form-wizard'
 Vue.use(VueFormWizard)
 
+//google maps
+import * as VueGoogleMaps from 'vue2-google-maps'
+Vue.use(VueGoogleMaps,{
+  load:{
+    key:"AIzaSyBNAqPrTQoz9P4NBlDDyfxrnKiafkaL8iQ"
+  }
+})
+
 // Table
 import Vuetable from 'vuetable-2'
 Vue.use(Vuetable)

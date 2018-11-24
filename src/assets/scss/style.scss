@@ -71,7 +71,7 @@
 body {
     background: $container-bg;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     overflow-x:hidden;
 }
 .admin-container {
@@ -80,7 +80,7 @@ body {
 }
 
 p {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Open Sans' sans-serif;
     font-weight: 400;
     line-height: 24px;
@@ -277,7 +277,7 @@ aside.left-panel {
                         content: "\f105";
                         color: #8b939b;
                         font-family: 'Fontawesome';
-                        font-size: 16px;
+                        font-size: 14px;
                         position: absolute;
                         top: 10px;
                         right: 0;
@@ -574,7 +574,7 @@ header.fixed-top {
     border: none;
     color: $menu-color;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 5;
     padding: 0;
     width: 43px;
@@ -600,7 +600,7 @@ header .form-inline {
             border-radius: 0;
             box-shadow: none;
             color: #d3d3d3;
-            font-size: 16px;
+            font-size: 14px;
             height: inherit;
             margin-right: 0 !important;
             padding: 10px 36px 10px 15px;
@@ -615,7 +615,7 @@ header .form-inline {
             background: transparent;
             border: none;
             color: #fff;
-            font-size: 16px;
+            font-size: 14px;
             position: absolute;
             right: 15px;
             top: 50%;
@@ -644,7 +644,7 @@ header .form-inline {
         background: transparent;
         border: none;
         color: $menu-color;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 5;
         padding-top: 0;
         padding-bottom: 0;
@@ -1233,7 +1233,7 @@ header .form-inline {
                 border-left: 1px solid rgba(120, 130, 140, 0.4);
                 color: #878787;
                 display: inline-block;
-                font-size: 16px;
+                font-size: 14px;
                 float: left;
                 padding: 0 7px;
                 width: inherit;
@@ -1406,7 +1406,7 @@ header .form-inline {
         font-weight: 300;
     }
     i{
-        font-style: 16px;
+        font-style: 14px;
         padding-right: 10px;
     }
 }
@@ -1703,7 +1703,7 @@ header .form-inline {
   margin-right: 5px;
 }
 .stat-widget-two .stat-text {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 5px;
   color: #868e96;
 }
@@ -1813,7 +1813,7 @@ header .form-inline {
   text-align: center;
 }
 .stat-widget-six .stat-heading {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
 }
 .stat-widget-six .stat-text {
