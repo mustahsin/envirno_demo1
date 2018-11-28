@@ -10,6 +10,12 @@ import { index } from './components/index';
 import VueFormWizard from 'vue-form-wizard'
 Vue.use(VueFormWizard)
 
+//Vuetify
+import Vuetify from 'vuetify'
+Vue.use(Vuetify)
+
+import 'vuetify/dist/vuetify.min.css' 
+
 //google maps
 import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.use(VueGoogleMaps,{

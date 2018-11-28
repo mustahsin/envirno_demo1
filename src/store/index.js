@@ -13,7 +13,9 @@ const store = new Vuex.Store({
   modules: {
     app
   },
-  state: {},
+  state: {
+    isAuthCompleted : false
+  },
   mutations: {}
 })
 

@@ -101,7 +101,7 @@ export default{
             var factory1 =
             {
                 Name:'Purbachal factory',
-                imageName:'etp1.jpg',
+                imageName:'factory1.jpg',
                 Status:'Very good',
                 Address:'Purbachal express',
                 Total_polution:12,
@@ -113,7 +113,7 @@ export default{
             {
                 Name:'Ashuganj factory',
                 Status:'Good',
-                imageName:'etp2.jpg',
+                imageName:'factory2.jpg',
                 Address:'Ashuganj',
                 Total_polution:19,
                 sensorData:this.allFactoryData[1]
@@ -123,13 +123,34 @@ export default{
             var factory3 =
             {
                 Name:'Savar factory',
-                imageName:'etp3.jpg',
+                imageName:'factory3.jpg',
                 Status:'Low',
                 Address:'Savar',
                 Total_polution:28,
                 sensorData:this.allFactoryData[2]
             }
             this.industryList.push(factory3);
+            var factory4 =
+            {
+                Name:'Demo factory',
+                imageName:'factory4.jpg',
+                Status:'Low',
+                Address:'Savar',
+                Total_polution:28,
+                sensorData:this.allFactoryData[2]
+            }
+            this.industryList.push(factory4);
+
+            var factory5 =
+            {
+                Name:'Demo factory 2',
+                imageName:'factory5.jpg',
+                Status:'Low',
+                Address:'Savar',
+                Total_polution:28,
+                sensorData:this.allFactoryData[1]
+            }
+            this.industryList.push(factory5);
 
             //alert(this.industryList[0].sensorData.Temperature); 
         }

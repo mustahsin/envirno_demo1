@@ -1,18 +1,21 @@
 <template>
-  <div id="app">
-    <auth-layout v-if="isAuth"></auth-layout>
-      <div class="admin-container" v-else>
-        <Sidebar :navItems="nav"/>
+<v-app id="app">
+   <!-- <auth-layout v-if="isAuth"></auth-layout> -->
+      <div class="admin-container">
+        <Sidebar v-if="isAuth" :navItems="nav"/>
         <div id="right-panel" class="right-panel">
-          <Header/>
+          <Header v-if="isAuth"/>
           <div class="content pb-0">
               <transition enter-active-class="animated fadeIn">
-                <router-view></router-view>
+                <v-app>
+                    <router-view></router-view>
+                </v-app>
+                
               </transition>
           </div>
         </div>
       </div>
-  </div>
+</v-app>
 </template>
 
 <script>
@@ -40,7 +43,8 @@ export default {
       return this.$route.matched
     },
     isAuth () {
-      return this.$route.path.match('auth')
+      //return this.$route.path.match('auth')
+      return this.$store.state.isAuthCompleted
     }
   }
 }

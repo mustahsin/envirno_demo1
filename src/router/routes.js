@@ -40,6 +40,7 @@ const IndustryPage = resolve => { require.ensure(['../components/industry/indust
 // const User = resolve => { require.ensure(['../layouts/User.vue'], ()=>{ resolve(require('../layouts/User.vue')); }); };
 
 //Pages
+const Home = resolve => { require.ensure(['../pages/Home.vue'], () => { resolve(require('../pages/Home.vue')); }); };
 const Login = resolve => { require.ensure(['../pages/login/Login.vue'], ()=>{ resolve(require('../pages/login/Login.vue')); }); };
 const Register = resolve => { require.ensure(['../pages/register/Register.vue'], ()=>{ resolve(require('../pages/register/Register.vue')); }); };
 const Page404 = resolve => { require.ensure(['../pages/Page404.vue'], ()=>{ resolve(require('../pages/Page404.vue')); }); };
@@ -51,10 +52,11 @@ export const routes = [
         path : '',
         name: 'home',
         components:{
-            default: Dashboard
+            default: Home
         }
     },
     {   path : '/dashboard',
+        name:'dashboard',
         components:{
             default: Dashboard
         }
@@ -83,7 +85,6 @@ export const routes = [
         props: true
     },
 
-    // { path: '/components/industry', name: 'industryDetails', component: IndustryPage },
 
     {
         path : '/components/icons',

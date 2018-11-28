@@ -3,7 +3,7 @@
 
     <card header-text="Welcome !">
       <div class="card-body card-block">
-        <form method="post" action="/auth/login" name="login">
+        <form @submit.prevent="onLogin" name="login">
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
@@ -31,7 +31,13 @@
 
 <script>
 export default {
-  name: 'Login'
+  name: 'Login',
+  methods:{
+    onLogin () {
+      this.$store.state.isAuthCompleted = true;
+      this.$router.replace({ path : '/dashboard' });
+    }
+  }
 }
 </script>
 
