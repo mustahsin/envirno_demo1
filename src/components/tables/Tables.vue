@@ -10,7 +10,9 @@
                   <th scope="col">#</th>
                   <th scope="col">Parameters</th>
                   <th scope="col">Current value</th>
-                  <th scope="col">24 hour avg</th>
+                  <th scope="col">High</th>
+                  <th scope="col">Low</th>
+                  <th scope="col">24 hour Avg</th>
                   <th scope="col">Reference</th>
               </tr>
               </thead>
@@ -19,6 +21,8 @@
                 <td>{{item}}</td>
                 <td>{{Object.keys(waterData)[item-1]}}</td>
                 <td>{{waterData[Object.keys(waterData)[item-1]]}}</td>
+                <td>{{maxData[item-1]}}</td>
+                <td>{{minData[item-1]}}</td>
                 <td>{{avgData[item-1]}}</td>
                 <td>{{referenceData[Object.keys(referenceData)[item-1]]}}</td>
               </tr>
@@ -28,20 +32,6 @@
         </card>
       </div>
     </div>
-
-    <!-- <div class="row">
-      <div class="col-md-12">
-        <card header-text="Search & Pagination">
-          <data-table :apiUrl="apiUrl"
-              :tableFields="tableFields"
-              :itemsPerPage="itemsPerPage"
-              :sortFunctions="sortFunctions"
-              :apiMode="apiMode"
-              :paginationPath="paginationPath"
-          ></data-table>
-        </card>
-      </div>
-    </div> -->
 
   </div>
 </template>
@@ -74,7 +64,9 @@
               sortFunctions: FieldsDef.sortFunctions,
               paginationPath: '',
               allData:[],
-              avgData:[]
+              avgData:[],
+              maxData:[],
+              minData:[]
           }
           
         },
@@ -84,7 +76,7 @@
           {
             for (var i=1;i<10;i++)
             {
-              var temp = (i+1)*1;
+              var temp = 24+(i+1)*1;
               var ph = 3.5 + (i*0.1);
               var hum = 50 + (i*0.5);
               var flow = 4.5 + (i*0.4);
@@ -115,6 +107,38 @@
               //alert("res : " + res);
               return res;
           },
+          getMaxFor()
+          {
+
+          },
+          getMax()
+          {
+              var max_tmp,max_ph,max_hum,max_flow;
+              max_tmp = 33;
+              max_ph = 11.0;
+              max_hum = 90;
+              max_flow = 9.1;
+
+              this.maxData.push(max_tmp);
+              this.maxData.push(max_ph);
+              this.maxData.push(max_hum);
+              this.maxData.push(max_flow);
+
+          },
+          getMin()
+          {
+              // var dict ={};
+              // var max_tmp,max_ph,max_hum,max_flow;
+              // max_tmp = 33;
+              // max_ph = 11.0;
+              // max_hum = 90;
+              // max_flow = 9.1;
+
+              this.minData.push('20');
+              this.minData.push(3.0);
+              this.minData.push(34);
+              this.minData.push(4);
+          },
           assignAvg ()
           {
             var dict = {};
@@ -134,6 +158,8 @@
         {
           this.addrealData();
           this.assignAvg();
+          this.getMax();
+          this.getMin();
           //alert("Tablees.vue component created");
         },
     }

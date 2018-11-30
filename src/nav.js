@@ -18,7 +18,11 @@ export default {
         attributes: {}
       }
     },
-
+    {
+      name: 'Overall Quality',
+      url: '/components/overallquality',
+      icon: 'fa fa-puzzle-piece'
+    },
     {
       name: 'All Factories',
       //url: '/components',
@@ -29,18 +33,18 @@ export default {
       }
     },
     {
-      name: 'Reference values',
+      name: 'Standard values',
       //url: '/components/tables',
       icon: 'fa fa-table'
     },
     {
-      name: 'Factory Reference',
+      name: 'Factory standard',
       //url: '/forms',
       icon: 'fa fa-pencil-square-o',
     },
     {
       name: 'Maps',
-      //url: '/components/icons',
+      url: '/components/maps/google-maps',
       icon: 'fa fa-star',
     },
     {
@@ -69,6 +73,20 @@ export default {
     },
     {
       name: 'Add sensor',
+      //url: 'http://vuejsadmin.com',
+      icon: 'fa fa-shopping-cart',
+      class: 'mt-auto',
+      //variant: 'success'
+    },
+    {
+      name: 'Set standard values',
+      //url: 'http://vuejsadmin.com',
+      icon: 'fa fa-shopping-cart',
+      class: 'mt-auto',
+      //variant: 'success'
+    },
+    {
+      name: 'Access Control',
       //url: 'http://vuejsadmin.com',
       icon: 'fa fa-shopping-cart',
       class: 'mt-auto',

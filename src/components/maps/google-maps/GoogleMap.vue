@@ -12,6 +12,7 @@
       v-bind:position="item.position"
       v-on:click="center=item.position"/>
   </gmap-map>
+  <p>{{param}}</p>
 </div>
 </template>
 
@@ -22,11 +23,13 @@ export default {
     return {
       center: { lat: 23.8103, lng: 90.4125 },  // Dhaka lat,long
       mapTypeId: "terrain",
-      // markers: [
-      //   { position: { lat: -0.48585, lng: 117.1466 } },
-      //   { position: { lat: -6.21462, lng: 106.84513 } }
-      // ]
+      param:''
     };
+  },
+  mounted()
+  {
+    this.$store.state.isAuthCompleted = true;
+    param = this.$store.state.test;
   }
 };
 </script>

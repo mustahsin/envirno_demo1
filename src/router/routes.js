@@ -35,6 +35,7 @@ const LineMapsPage = resolve => { require.ensure(['../components/maps/line-maps/
 
 //industry
 const IndustryPage = resolve => { require.ensure(['../components/industry/industryHeader.vue'], () => { resolve(require('../components/industry/industryHeader.vue')); }); };
+const OverallQuality = resolve => { require.ensure(['../components/industry/overallQuality.vue'], () => { resolve(require('../components/industry/overallQuality.vue')); }); };
 
 // // User Info
 // const User = resolve => { require.ensure(['../layouts/User.vue'], ()=>{ resolve(require('../layouts/User.vue')); }); };
@@ -82,6 +83,13 @@ export const routes = [
         path: '/components/industry',
         name: 'Industry',
         component: IndustryPage,
+        props: true
+    },
+
+    {
+        path: '/components/overallquality',
+        name: 'OverallQuality',
+        component: OverallQuality,
         props: true
     },
 

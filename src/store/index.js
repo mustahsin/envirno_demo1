@@ -14,7 +14,8 @@ const store = new Vuex.Store({
     app
   },
   state: {
-    isAuthCompleted : false
+    isAuthCompleted : false,
+    test:'hello'
   },
   mutations: {}
 })

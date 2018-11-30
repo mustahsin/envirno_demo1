@@ -102,7 +102,8 @@ export default{
             {
                 Name:'Purbachal factory',
                 imageName:'factory1.jpg',
-                Status:'Very good',
+                Status:'Good',
+                Live:'Live',
                 Address:'Purbachal express',
                 Total_polution:12,
                 sensorData:this.allFactoryData[0]
@@ -112,7 +113,8 @@ export default{
             var factory2 =
             {
                 Name:'Ashuganj factory',
-                Status:'Good',
+                Status:'Excellent',
+                Live:'Live',
                 imageName:'factory2.jpg',
                 Address:'Ashuganj',
                 Total_polution:19,
@@ -125,6 +127,7 @@ export default{
                 Name:'Savar factory',
                 imageName:'factory3.jpg',
                 Status:'Low',
+                Live:'Closed',
                 Address:'Savar',
                 Total_polution:28,
                 sensorData:this.allFactoryData[2]
@@ -134,7 +137,8 @@ export default{
             {
                 Name:'Demo factory',
                 imageName:'factory4.jpg',
-                Status:'Low',
+                Status:'Bad',
+                Live:'Live',
                 Address:'Savar',
                 Total_polution:28,
                 sensorData:this.allFactoryData[2]
@@ -145,12 +149,37 @@ export default{
             {
                 Name:'Demo factory 2',
                 imageName:'factory5.jpg',
-                Status:'Low',
+                Status:'Good',
+                Live:'Closed',
                 Address:'Savar',
                 Total_polution:28,
                 sensorData:this.allFactoryData[1]
             }
             this.industryList.push(factory5);
+
+            var factory6 =
+            {
+                Name:'Demo factory 3',
+                imageName:'factory2.jpg',
+                Status:'Good',
+                Live:'Closed',
+                Address:'Savar',
+                Total_polution:28,
+                sensorData:this.allFactoryData[0]
+            }
+            this.industryList.push(factory6);
+
+            var factory7 =
+            {
+                Name:'Demo factory 4',
+                imageName:'factory4.jpg',
+                Status:'Very Good',
+                Live:'Live',
+                Address:'Gajipur',
+                Total_polution:28,
+                sensorData:this.allFactoryData[2]
+            }
+            this.industryList.push(factory7);
 
             //alert(this.industryList[0].sensorData.Temperature); 
         }
