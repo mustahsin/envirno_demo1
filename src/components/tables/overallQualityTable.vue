@@ -46,9 +46,16 @@ export default {
         
         //factoryList:[]
     },
+    computed: {
+        testVuex(){
+            return this.$store.state.test;
+        }
+    },
     methods : {
         addData() {
-             var statusDict = [];
+            var statusDict = [];
+
+            var ab = this.$store.state.test;
 
             var factoryName = 'Factory A';
             var statusList = {
@@ -245,10 +252,6 @@ export default {
             console.log('status = '+ key + statusList[key]);
             return statusList[key];
 
-        },
-        test()
-        {
-            return 3;
         }
     },
     mounted(){

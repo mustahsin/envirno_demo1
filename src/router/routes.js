@@ -188,7 +188,6 @@ export const routes = [
                 component: Page500,
                 name: 'Page500'
             }
-
         ]
     },
 

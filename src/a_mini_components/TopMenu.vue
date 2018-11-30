@@ -1,161 +1,113 @@
 <template>
     <div id="topmenu">
-        <div class="row">
-            <div class="col-md-2">
-                <img id="app-logo" src="../../src/images/envirotics_logo.png" alt="Logo">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <nav class="navbar navbar-expand-sm   navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <img class="app-logo" src="../../src/images/envirotics_logo.png" alt="Logo">
+    
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Goal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <router-link to="/auth/login">
+                            <a href="#" class="nav-link">Login</a>
+                        </router-link>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-default my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
-            <div class="col-md-5">
-                <nav v-bind:class="active" v-on:click.prevent>
-                    <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
-                <a href="#" class="projects" v-on:click="makeActive('projects')">Our Goal</a>
-                <a href="#" class="services" v-on:click="makeActive('services')">About</a>
-                <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
-                </nav>
-                
-            </div>
-            <div class="col-md-4">
-                <p id="Register" align="right">
-                    <router-link to="/auth/login">
-                        <a href="#" class="home" v-on:click="">Login</a>
-                    </router-link>
+        </nav>
+        <!-- <div class="row">
+                <div class="col-md-2">
+                    <img id="app-logo" src="../../src/images/envirotics_logo.png" alt="Logo">
+                </div>
+                <div class="col-md-5">
+                    <nav v-bind:class="active" v-on:click.prevent>
+                        <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
+                    <a href="#" class="projects" v-on:click="makeActive('projects')">Our Goal</a>
+                    <a href="#" class="services" v-on:click="makeActive('services')">About</a>
+                    <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
+                    </nav>
                     
-                    <a href="#" class="home" v-on:click="makeActive('home')">Register</a>
-                </p>
-            </div>
-            
-            <!-- <div>
+                </div>
+                <div class="col-md-4">
+                    <p id="Register" align="right">
+                        <router-link to="/auth/login">
+                            <a href="#" class="home" v-on:click="">Login</a>
+                        </router-link>
+                        
+                        <a href="#" class="home" v-on:click="makeActive('home')">Register</a>
+                    </p>
+                </div>
                 
             </div> -->
-        </div>
-        
-
-        
     </div>
 </template>
 
-<script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
+    
+</script>
 
-export default {
-  components:{
-      
-  },
-  data () {
-      return{
-          active: 'home'
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    
+</script>
+
+<script>
+    export default {
+        components: {
+    
+        },
+        data() {
+            return {
+                active: 'home'
+            }
+        },
+        methods: {
+            makeActive: function(item) {
+                this.active = item;
+            }
+        }
+    
     }
-  },
-  methods: {
-    makeActive: function(item){
-        this.active = item;
-    }
-  }
-  
-}
 </script>
 
 <style lang="scss" scoped>
-
-#app-logo{
-    width: 140px;
-    height: 80px;
-}
-
-*{
-    margin:0;
-    padding:0;
-}
-
-body{
-    font:15px/1.3 'Open Sans', sans-serif;
-    color: #5e5b64;
-    text-align:center;
-}
-
-// a, a:visited {
-//     outline:none;
-//     color:#28e276;
-// }
-
-a:hover{
-    text-decoration:none;
-}
-
-section, footer, header, aside, nav{
-    display: block;
-}
-
-nav{
-    display:block;
-    margin:auto;
-    background-color:#292b35;
-    box-shadow:0 1px 1px #ccc;
-    border-radius:2px;
-}
-
-nav a{
-    display:inline-block;
-    padding: 18px 30px;
-    color:#fff !important;
-    font-weight:bold;
-    font-size:10px;
-    text-decoration:none !important;
-    line-height:1;
-    text-transform: uppercase;
-    background-color:transparent;
-
-    -webkit-transition:background-color 0.25s;
-    -moz-transition:background-color 0.25s;
-    transition:background-color 0.25s;
-}
-
-#Register{
-    // padding-top: 25%;
-    // padding-bottom: 25%;
-}
-
-a {
-    font-weight:bold;
-    font-size:12px;
-    //-moz-box-sizing: border-box;
-  //display:flex;/*CSS3*/
-}
-
-nav a:first-child{
-    border-radius:2px 0 0 2px;
-}
-
-nav a:last-child{
-    border-radius:0 2px 2px 0;
-}
-
-nav.home .home,
-nav.projects .projects,
-nav.services .services,
-nav.contact .contact{
-    background-color:#e35885;
-}
-
-p{
-    font-size:22px;
-    font-weight:bold;
-    color:#7d9098;
-    vertical-align: middle;
-}
-
-p b{
-    color:#ffffff;
-    display:inline-block;
-    padding:5px 10px;
-    background-color:#c4d7e0;
-    border-radius:2px;
-    text-transform:uppercase;
-    font-size:18px;
-}
-.resource {
-  margin: 20px 0;
-}
-
-
-
-
+    .app-logo
+    {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .navbar {
+        background: #0ccc1c !important;
+    }
+    
+    .navbar .nav-item .nav-link {
+        color: #eee !important;
+        font-weight: bold;
+        width: 100px !important;
+    }
+    
+    .navbar .nav-item .nav-link:hover .navbar .nav-item .nav-link {
+        color: red !important;
+    }
+    .btn-outline-default{
+        color: white;
+    }
 </style>

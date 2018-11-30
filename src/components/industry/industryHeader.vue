@@ -12,10 +12,10 @@
                         <div class="col-md-6">
                         <p class="card-text">Factory Description here.</p>
                         </div>
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-2 float-right">
-                        <img class=".rounded-circle mx-auto d-block" :src="'dist/'+ industry.imageName" alt="pic">
+                        <!-- <div class="col-md-2">
+                        </div> -->
+                        <div class="col-md-6 float-right">
+                        <img class="industry .rounded-circle mx-auto d-block" :src="'dist/'+ industry.imageName" alt="pic">
                         </div>
                     </div>
                 </div>
@@ -69,4 +69,7 @@ import Table from '../../components/tables/Tables.vue';
 
 <style>
    
+   .industry{
+       height:250px;
+   }
 </style>
